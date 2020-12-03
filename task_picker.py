@@ -24,15 +24,15 @@ for pomodoro in range(pomodoro_slots):
     print("The task you have now is", current_task, "and you have 25 mins to finish it!")
 
     tic = time.perf_counter()
-    done = "something"
-    while done == "something":
+    done = "placeholder"
+    while done == "placeholder":
         done = input("Write anything when you're done!\n")
     toc = time.perf_counter()
     minutes_elapsed = round((toc - tic) / 60, 2)
     print("This task took you", minutes_elapsed, "minutes")
 
-    wait = "something"
-    while wait == "something":
+    wait = "placeholder"
+    while wait == "placeholder":
         wait = input("Write anything when you're ready to continue!\n")
 
     for taskie_index in range(len(tasks.Task)):
