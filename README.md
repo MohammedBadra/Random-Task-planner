@@ -1,8 +1,8 @@
 # Random-Task-planner
 Random task planner using the pomodoro technique
 
-Each task is designed to take a number of pomodoros of 25 minutes each. Add tasks and set the number of alloted pomodoros for each one in the csv file.
-The csv file, tasks.csv, template is included.
+Each task is designed to take a number of pomodoros of 25 minutes each. If the taks take longer, the program will adjust the break duration accordingly.
+The csv file, Task template.csv, template is included.
 
 Usage:
 1. Execute w/ this to avoid irrelevant warnings:
