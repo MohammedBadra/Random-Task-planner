@@ -14,4 +14,4 @@ Usage:
 2. Use the Task template.csv to fill in your tasks and then rename it in this format: "xxYyy", where "xx" is the day's date in numbers and "Yyy" are first three
 letters of the *month's literal name. Note that the first letter in "Yyy" is capitalized.
 
-*December is currently hardcoded into planner.
+*December is currently hardcoded into the planner.
