@@ -2,7 +2,7 @@
 Random task planner using the pomodoro technique
 
 Each task is designed to take a number of pomodoros of 25 minutes each. If the taks take longer, the program will adjust the break duration accordingly.
-The csv file, Task template.csv, template is included.
+The seed csv template, month_template.csv, is included.
 
 Usage:
 1. Execute w/ this to avoid irrelevant warnings:
@@ -11,9 +11,15 @@ Usage:
     python -W ignore task_picker.py
     ```
     
-2. Use the Task template.csv to fill in your tasks and then rename it in this format: "ddMmm", where "dd" is the day's date in numbers and "Mmm" are first three
-letters of the *month's literal name. Note that the first letter in "Yyy" is capitalized.
+2. If the monthly csv file doesn't already exist, the program generates it for you in this form: "MmmYY.csv" in the first run. Then, go ahead and fill the "Task" column in the respective month csv file, and add the date to the corresponding "Date" in this format: "DD/MM/YYYY".
 
 Notes:
 1. Only use this planner with tasks of equivalent priorities. Updates on prioritization preferences will be rolled out soon
-2. December is currently hardcoded into the planner.
+
+
+Glossary:
+1. Mmm: first three letters of the *month's literal name
+2. YY: last two digits of the year
+3. DD: day in numbers
+4. MM: month in numbers
+5. YYYY" year in numbers
