@@ -6,14 +6,17 @@ import random
 import time
 import pytz
 
-utc_now = pytz.utc.localize(datetime.utcnow())
-pst_now = utc_now.astimezone(pytz.timezone("America/Los_Angeles"))
+#timezone = "America/Los_Angeles"
+timezone = "Asia/Seoul"
 
-raw_today = pst_now.strftime("%d/%m/%Y/%H")
+utc_now = pytz.utc.localize(datetime.utcnow())
+my_timezone_now = utc_now.astimezone(pytz.timezone(timezone))
+
+raw_today = my_timezone_now.strftime("%d/%m/%Y/%H")
 today = raw_today.split("/")
 ###########################################################################################################################################
 
-#handling the monthyl database csv file
+#parsing the monthly database csv file
 months_dict = {1: "Jan", 2: "Feb", 3: "Mar", 4: "Apr", 5: "May", 6: "Jun", 7: "Jul", 8: "Aug", 9: "Sep", 10: "Oct", 11: "Nov", 12: "Dec"}
 
 year = str(int(today[2]) - 2000)
@@ -54,7 +57,7 @@ pomodoro_slots = int(input("How many pomodoros do you want to do now?\n"))
 if pomodoro_slots > availables_sum:
     print("Please rerun after adding more tasks!")
     sys.exit()
-########################################################################################################################################### 
+###########################################################################################################################################
 
 ###########################################################################################################################################
 for pomodoro in range(pomodoro_slots):
@@ -91,5 +94,5 @@ for pomodoro in range(pomodoro_slots):
     #print(tasks)
     print("Tasks left:", available_tasks, "\n")
     task_count += 1
-    
+
     tasks.to_csv(csvname)
