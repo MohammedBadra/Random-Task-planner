@@ -12,6 +12,8 @@ Usage:
     ```
     
 2. If the monthly csv file doesn't already exist, the program generates it for you in this form: "MmmYY.csv" in the first run. Then, go ahead and fill the "Task" column in the respective month csv file, and add the date to the corresponding "Date" in this format: "DD/MM/YYYY".
+3. 
+4. Fill in the timezone variable with a pytz string timezone, found through pytz.all_timezones
 
 Notes:
 1. Only use this planner with tasks of equivalent priorities. Updates on prioritization preferences will be rolled out soon
